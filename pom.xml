@@ -10,5 +10,21 @@
 		<module>mydubbo-user-api</module>
 		<module>mydubbo-user-provider</module>
 		<module>mydubbo-user-consumer</module>
+		<module>mydubbo-boot-user-api</module>
+		<module>mydubbo-boot-user-provider</module>
+		<module>mydubbo-boot-user-consumer</module>
 	</modules>
+	
+	<dependencyManagement>
+		<dependencies>
+			<!-- Spring Boot -->
+	        <dependency>
+	            <groupId>org.springframework.boot</groupId>
+	            <artifactId>spring-boot-dependencies</artifactId>
+	            <version>2.1.6.RELEASE</version>
+	            <type>pom</type>
+	            <scope>import</scope>
+	        </dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>
