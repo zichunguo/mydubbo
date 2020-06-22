@@ -6,4 +6,9 @@
 	<artifactId>mydubbo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	<modules>
+		<module>mydubbo-user-api</module>
+		<module>mydubbo-user-provider</module>
+		<module>mydubbo-user-consumer</module>
+	</modules>
 </project>
