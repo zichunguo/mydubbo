@@ -20,7 +20,7 @@ import org.springframework.context.annotation.ImportResource;
 //@EnableDubbo // 开启基于注解的dubbo功能，方式一
 //@ImportResource(locations = "classpath:provider.xml")	// 方式二
 @EnableDubbo(scanBasePackages = "com.dubbo.test") // 方式三
-@EnableHystrix	// 开启服务容错
+//@EnableHystrix	// 开启服务容错
 public class Application {
 	
 	public static void main(String[] args) {

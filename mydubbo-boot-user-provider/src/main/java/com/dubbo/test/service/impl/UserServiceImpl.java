@@ -24,7 +24,8 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 public class UserServiceImpl implements UserService {
 
 	@Override
-	@HystrixCommand
+//	@HystrixCommand
+//	@HystrixCommand(fallbackMethod = "getUserAddressList_fall")
 	public List<UserAddress> getUserAddressList(String userId) {
 		System.out.println("******  000  ******");
 		UserAddress address1 = new UserAddress(1, "北京", "1", "张三", "18812345678", "Y");
@@ -33,6 +34,11 @@ public class UserServiceImpl implements UserService {
 			throw new RuntimeException();
 		}
 		return Arrays.asList(address1, address2);
+	}
+	
+	public List<UserAddress> getUserAddressList_fall(String userId) {
+		System.out.println("*********** getUserAddressList_fall **************");
+		return Arrays.asList(new UserAddress(0, "无", "0", "无", "***", "Y"));
 	}
 
 }
